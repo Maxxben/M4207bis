@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MonController!{% endblock %}
+
+{% block body %}
+
+
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/deconnexion">deconnexion</a>
+          <span class="sr-only">(current)</span>
+        </a>
+        <li class="nav-item">
+          <a class="nav-link" href="/mon">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/creation">Inscription</a>
+        </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listeUser">Liste utilisateur</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/listeFichier">Liste Fichiers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fichier">Ajouter Fichier</a>
+        </li>
+<!--
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Separated link</a>
+        </div>
+      </li>
+-->
+        <li class="nav-item">
+          <a class="nav-link">{{utilisateur.nom}} {{utilisateur.prenom}}</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+<div class="example-wrapper">
+    <h2 class="center"><p>Connecté en temps que : <p class="green">{{utilisateur.nom}} {{utilisateur.prenom}}</h2>
+
+<!-- Pour etre plus propre, j'aurais pu faire un fichier CSS mais c'est la phase de test-->
+
+<style type="text/css">
+  .green {
+    color: #26b72b;
+  }
+</style>
+
+<style type="text/css">
+  .center {
+    text-align: center;
+  }
+</style>
+
+
+  <!--<option value="{{utilisateur.id}}"><h3><b>{{utilisateur.nom}} {{utilisateur.prenom}}</b></h3></option> 
+  -->
+
+  
+</div>
+{% endblock %}
